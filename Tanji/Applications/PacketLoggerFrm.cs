@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 using Tanji.Components;
-using Tanji.Manipulators;
 using Tanji.Applications.Dialogs;
 
 using Sulakore.Protocol;

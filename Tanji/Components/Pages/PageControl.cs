@@ -1,18 +1,29 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
+using System.Collections.Generic;
 
-using Tanji.Properties;
-
-namespace Tanji.Components
+namespace Tanji.Components.Pages
 {
-    public class TanjiForm : Form, INotifyPropertyChanged
+    [ToolboxItem(false)]
+    [DesignerCategory("Code")]
+    public class PageControl : UserControl, INotifyPropertyChanged
     {
-        public TanjiForm()
+        private readonly Dictionary<string, Binding> _bindings;
+
+        [Browsable(false)]
+        public IMaster Master { get; private set; }
+
+        public PageControl()
         {
+            _bindings = new Dictionary<string, Binding>();
+
             BackColor = Color.White;
-            Icon = Resources.Tanji_128;
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+        }
+
+        public virtual void AssignMaster(IMaster master)
+        {
+            Master = master;
         }
 
         protected void RaiseOnPropertyChanged(string propertyName)
@@ -21,8 +32,10 @@ namespace Tanji.Components
         }
         protected void Bind(Control control, string propertyName, string dataMember)
         {
-            control.DataBindings.Add(propertyName, this,
+            Binding binding = control.DataBindings.Add(propertyName, this,
                 dataMember, false, DataSourceUpdateMode.OnPropertyChanged);
+
+            _bindings[dataMember] = binding;
         }
 
         #region INotifyPropertyChanged Implementation
@@ -32,7 +45,10 @@ namespace Tanji.Components
             PropertyChangedEventHandler handler = PropertyChanged;
 
             if (handler != null)
-                Invoke(handler, this, e);
+                FindForm()?.Invoke(handler, this, e);
+
+            if (DesignMode)
+                _bindings[e.PropertyName].ReadValue();
         }
         #endregion
     }
