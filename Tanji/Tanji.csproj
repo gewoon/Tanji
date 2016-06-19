@@ -26,7 +26,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <AssemblyVersion>1.4.14.0</AssemblyVersion>
+    <AssemblyVersion>1.4.17.0</AssemblyVersion>
     <TargetFrameworkProfile />
     <PrimaryVersionType>AssemblyVersionAttribute</PrimaryVersionType>
     <AssemblyInfoFilePath>
@@ -190,6 +190,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Sulakore\Sulakore\Sulakore.csproj">
+      <Project>{15e841ec-2411-4f1b-a3ee-07e86cdb32c7}</Project>
+      <Name>Sulakore</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Tangine\Tangine.csproj">
       <Project>{82f644cd-3896-482c-b47d-e34529e95d52}</Project>
       <Name>Tangine</Name>
