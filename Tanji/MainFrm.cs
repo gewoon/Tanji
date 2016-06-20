@@ -89,7 +89,7 @@ namespace Tanji
 
         private void TanjiInfoTxt_Click(object sender, EventArgs e)
         {
-            Process.Start("https://GitHub.com/ArachisH/Tanji");
+            Process.Start("https://GitHub.com/adversities/Tanji");
         }
         private void TanjiVersionTxt_Click(object sender, EventArgs e)
         {
