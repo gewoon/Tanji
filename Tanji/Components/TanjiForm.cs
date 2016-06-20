@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
 
@@ -8,32 +9,35 @@ namespace Tanji.Components
 {
     public class TanjiForm : Form, INotifyPropertyChanged
     {
-        public TanjiForm()
-        {
-            BackColor = Color.White;
-            Icon = Resources.Tanji_128;
-            FormBorderStyle = FormBorderStyle.Fixed3D;
-        }
+        private readonly Action<PropertyChangedEventArgs> _onPropertyChanged;
 
+        public event PropertyChangedEventHandler PropertyChanged;
         protected void RaiseOnPropertyChanged(string propertyName)
         {
-            OnPropertyChanged(new PropertyChangedEventArgs(propertyName));
+            if (PropertyChanged != null)
+            {
+                OnPropertyChanged(
+                    new PropertyChangedEventArgs(propertyName));
+            }
         }
-        protected void Bind(Control control, string propertyName, string dataMember)
-        {
-            control.DataBindings.Add(propertyName, this,
-                dataMember, false, DataSourceUpdateMode.OnPropertyChanged);
-        }
-
-        #region INotifyPropertyChanged Implementation
-        public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(PropertyChangedEventArgs e)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-
-            if (handler != null)
-                Invoke(handler, this, e);
+            if (InvokeRequired)
+            {
+                Invoke(_onPropertyChanged, e);
+            }
+            else
+            {
+                PropertyChanged?.Invoke(this, e);
+            }
         }
-        #endregion
+
+        public TanjiForm()
+        {
+            _onPropertyChanged = OnPropertyChanged;
+
+            BackColor = Color.White;
+            Icon = Resources.Tanji_128;
+        }
     }
 }

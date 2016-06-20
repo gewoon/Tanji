@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\GitHubAttribute.cs" />
-    <Compile Include="Internals\ContractorProxy.cs" />
     <Compile Include="GitHub\GitAsset.cs" />
     <Compile Include="GitHub\GitProfile.cs" />
     <Compile Include="GitHub\GitRelease.cs" />
@@ -74,12 +73,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Sulakore\Sulakore\Sulakore.csproj">
-      <Project>{15e841ec-2411-4f1b-a3ee-07e86cdb32c7}</Project>
-      <Name>Sulakore</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -89,6 +82,12 @@
     <Content Include="FlashInspect.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sulakore\Sulakore\Sulakore.csproj">
+      <Project>{15e841ec-2411-4f1b-a3ee-07e86cdb32c7}</Project>
+      <Name>Sulakore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

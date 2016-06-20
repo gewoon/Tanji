@@ -133,7 +133,7 @@ namespace Tanji.Applications.Dialogs
                 nameof(IsDirectionUp), false, DataSourceUpdateMode.OnPropertyChanged);
         }
 
-        private void FindDialog_KeyDown(object sender, KeyEventArgs e)
+        private void FindTxt_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
