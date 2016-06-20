@@ -240,7 +240,7 @@
             this.TanjiInfoTxt.Name = "TanjiInfoTxt";
             this.TanjiInfoTxt.Size = new System.Drawing.Size(187, 19);
             this.TanjiInfoTxt.Spring = true;
-            this.TanjiInfoTxt.Text = "GitHub | ArachisH/Tanji";
+            this.TanjiInfoTxt.Text = "GitHub | Adversities/Tanji";
             this.TanjiInfoTxt.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.TanjiInfoTxt.Click += new System.EventHandler(this.TanjiInfoTxt_Click);
             // 
@@ -500,6 +500,7 @@
             this.ToolboxTab.Controls.Add(this.TTUShortInputTxt);
             this.ToolboxTab.Location = new System.Drawing.Point(4, 28);
             this.ToolboxTab.Name = "ToolboxTab";
+            this.ToolboxTab.Padding = new System.Windows.Forms.Padding(3);
             this.ToolboxTab.Size = new System.Drawing.Size(476, 313);
             this.ToolboxTab.TabIndex = 3;
             this.ToolboxTab.Text = "Toolbox";
@@ -508,7 +509,7 @@
             // TT16BitInputLbl
             // 
             this.TT16BitInputLbl.AutoSize = true;
-            this.TT16BitInputLbl.Location = new System.Drawing.Point(5, 263);
+            this.TT16BitInputLbl.Location = new System.Drawing.Point(8, 266);
             this.TT16BitInputLbl.Name = "TT16BitInputLbl";
             this.TT16BitInputLbl.Size = new System.Drawing.Size(100, 13);
             this.TT16BitInputLbl.TabIndex = 50;
@@ -517,7 +518,7 @@
             // TT32BitInputLbl
             // 
             this.TT32BitInputLbl.AutoSize = true;
-            this.TT32BitInputLbl.Location = new System.Drawing.Point(5, 291);
+            this.TT32BitInputLbl.Location = new System.Drawing.Point(8, 294);
             this.TT32BitInputLbl.Name = "TT32BitInputLbl";
             this.TT32BitInputLbl.Size = new System.Drawing.Size(100, 13);
             this.TT32BitInputLbl.TabIndex = 0;
@@ -674,6 +675,7 @@
             this.ConstructerTab.Controls.Add(this.CTUpdateOnEnterChckbx);
             this.ConstructerTab.Location = new System.Drawing.Point(4, 4);
             this.ConstructerTab.Name = "ConstructerTab";
+            this.ConstructerTab.Padding = new System.Windows.Forms.Padding(3);
             this.ConstructerTab.Size = new System.Drawing.Size(397, 271);
             this.ConstructerTab.TabIndex = 2;
             this.ConstructerTab.Text = "Constructer";
@@ -706,7 +708,7 @@
             // CTHeaderLbl
             // 
             this.CTHeaderLbl.AutoSize = true;
-            this.CTHeaderLbl.Location = new System.Drawing.Point(0, 0);
+            this.CTHeaderLbl.Location = new System.Drawing.Point(3, 3);
             this.CTHeaderLbl.Name = "CTHeaderLbl";
             this.CTHeaderLbl.Size = new System.Drawing.Size(42, 13);
             this.CTHeaderLbl.TabIndex = 31;
@@ -715,7 +717,7 @@
             // CTAmountLbl
             // 
             this.CTAmountLbl.AutoSize = true;
-            this.CTAmountLbl.Location = new System.Drawing.Point(331, 0);
+            this.CTAmountLbl.Location = new System.Drawing.Point(334, 3);
             this.CTAmountLbl.Name = "CTAmountLbl";
             this.CTAmountLbl.Size = new System.Drawing.Size(43, 13);
             this.CTAmountLbl.TabIndex = 39;
@@ -725,10 +727,10 @@
             // 
             this.CTStructureTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CTStructureTxt.Location = new System.Drawing.Point(115, 220);
+            this.CTStructureTxt.Location = new System.Drawing.Point(118, 223);
             this.CTStructureTxt.Name = "CTStructureTxt";
             this.CTStructureTxt.ReadOnly = true;
-            this.CTStructureTxt.Size = new System.Drawing.Size(279, 20);
+            this.CTStructureTxt.Size = new System.Drawing.Size(273, 20);
             this.CTStructureTxt.TabIndex = 48;
             this.CTStructureTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -736,7 +738,7 @@
             // 
             this.CTTransferBelowBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTTransferBelowBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTTransferBelowBtn.Location = new System.Drawing.Point(3, 246);
+            this.CTTransferBelowBtn.Location = new System.Drawing.Point(0, 249);
             this.CTTransferBelowBtn.Name = "CTTransferBelowBtn";
             this.CTTransferBelowBtn.Size = new System.Drawing.Size(106, 22);
             this.CTTransferBelowBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -745,8 +747,6 @@
             // 
             // CTChunkCountLbl
             // 
-            this.CTChunkCountLbl.BorderWidth = 1;
-            this.CTChunkCountLbl.IsBorderVisible = true;
             this.CTChunkCountLbl.Location = new System.Drawing.Point(3, 220);
             this.CTChunkCountLbl.Name = "CTChunkCountLbl";
             this.CTChunkCountLbl.Size = new System.Drawing.Size(106, 20);
@@ -782,7 +782,7 @@
             this.CTRemoveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTRemoveBtn.BackColor = System.Drawing.Color.Transparent;
             this.CTRemoveBtn.Enabled = false;
-            this.CTRemoveBtn.Location = new System.Drawing.Point(115, 246);
+            this.CTRemoveBtn.Location = new System.Drawing.Point(112, 249);
             this.CTRemoveBtn.Name = "CTRemoveBtn";
             this.CTRemoveBtn.Size = new System.Drawing.Size(89, 22);
             this.CTRemoveBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -794,7 +794,7 @@
             this.CTMoveDownBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTMoveDownBtn.BackColor = System.Drawing.Color.Transparent;
             this.CTMoveDownBtn.Enabled = false;
-            this.CTMoveDownBtn.Location = new System.Drawing.Point(305, 246);
+            this.CTMoveDownBtn.Location = new System.Drawing.Point(302, 249);
             this.CTMoveDownBtn.Name = "CTMoveDownBtn";
             this.CTMoveDownBtn.Size = new System.Drawing.Size(89, 22);
             this.CTMoveDownBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -806,7 +806,7 @@
             this.CTMoveUpBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTMoveUpBtn.BackColor = System.Drawing.Color.Transparent;
             this.CTMoveUpBtn.Enabled = false;
-            this.CTMoveUpBtn.Location = new System.Drawing.Point(210, 246);
+            this.CTMoveUpBtn.Location = new System.Drawing.Point(207, 249);
             this.CTMoveUpBtn.Name = "CTMoveUpBtn";
             this.CTMoveUpBtn.Size = new System.Drawing.Size(89, 22);
             this.CTMoveUpBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -817,7 +817,7 @@
             // 
             this.CTClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTClearBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTClearBtn.Location = new System.Drawing.Point(3, 42);
+            this.CTClearBtn.Location = new System.Drawing.Point(0, 45);
             this.CTClearBtn.Name = "CTClearBtn";
             this.CTClearBtn.Size = new System.Drawing.Size(79, 22);
             this.CTClearBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -828,7 +828,7 @@
             // 
             this.CTWriteBooleanBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTWriteBooleanBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTWriteBooleanBtn.Location = new System.Drawing.Point(296, 42);
+            this.CTWriteBooleanBtn.Location = new System.Drawing.Point(293, 45);
             this.CTWriteBooleanBtn.Name = "CTWriteBooleanBtn";
             this.CTWriteBooleanBtn.Size = new System.Drawing.Size(98, 22);
             this.CTWriteBooleanBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -839,7 +839,7 @@
             // 
             this.CTWriteStringBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTWriteStringBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTWriteStringBtn.Location = new System.Drawing.Point(192, 42);
+            this.CTWriteStringBtn.Location = new System.Drawing.Point(189, 45);
             this.CTWriteStringBtn.Name = "CTWriteStringBtn";
             this.CTWriteStringBtn.Size = new System.Drawing.Size(98, 22);
             this.CTWriteStringBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -850,7 +850,7 @@
             // 
             this.CTWriteIntegerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTWriteIntegerBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTWriteIntegerBtn.Location = new System.Drawing.Point(88, 42);
+            this.CTWriteIntegerBtn.Location = new System.Drawing.Point(85, 45);
             this.CTWriteIntegerBtn.Name = "CTWriteIntegerBtn";
             this.CTWriteIntegerBtn.Size = new System.Drawing.Size(98, 22);
             this.CTWriteIntegerBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -860,7 +860,7 @@
             // CTValueLbl
             // 
             this.CTValueLbl.AutoSize = true;
-            this.CTValueLbl.Location = new System.Drawing.Point(85, -1);
+            this.CTValueLbl.Location = new System.Drawing.Point(88, 2);
             this.CTValueLbl.Name = "CTValueLbl";
             this.CTValueLbl.Size = new System.Drawing.Size(34, 13);
             this.CTValueLbl.TabIndex = 29;
@@ -878,11 +878,11 @@
             this.CTConstructerVw.GridLines = true;
             this.CTConstructerVw.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.CTConstructerVw.HideSelection = false;
-            this.CTConstructerVw.Location = new System.Drawing.Point(3, 70);
+            this.CTConstructerVw.Location = new System.Drawing.Point(6, 67);
             this.CTConstructerVw.MultiSelect = false;
             this.CTConstructerVw.Name = "CTConstructerVw";
             this.CTConstructerVw.ShowItemToolTips = true;
-            this.CTConstructerVw.Size = new System.Drawing.Size(391, 144);
+            this.CTConstructerVw.Size = new System.Drawing.Size(385, 144);
             this.CTConstructerVw.TabIndex = 44;
             this.CTConstructerVw.UseCompatibleStateImageBehavior = false;
             this.CTConstructerVw.View = System.Windows.Forms.View.Details;
@@ -908,7 +908,7 @@
             this.CTUpdateOnEnterChckbx.Checked = true;
             this.CTUpdateOnEnterChckbx.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CTUpdateOnEnterChckbx.Enabled = false;
-            this.CTUpdateOnEnterChckbx.Location = new System.Drawing.Point(209, -1);
+            this.CTUpdateOnEnterChckbx.Location = new System.Drawing.Point(212, 2);
             this.CTUpdateOnEnterChckbx.Name = "CTUpdateOnEnterChckbx";
             this.CTUpdateOnEnterChckbx.Size = new System.Drawing.Size(114, 17);
             this.CTUpdateOnEnterChckbx.TabIndex = 50;
@@ -1139,6 +1139,7 @@
             this.PrimitiveTab.Controls.Add(this.PTPacketTxt);
             this.PrimitiveTab.Location = new System.Drawing.Point(4, 4);
             this.PrimitiveTab.Name = "PrimitiveTab";
+            this.PrimitiveTab.Padding = new System.Windows.Forms.Padding(3);
             this.PrimitiveTab.Size = new System.Drawing.Size(397, 271);
             this.PrimitiveTab.TabIndex = 1;
             this.PrimitiveTab.Text = "Primitive";
@@ -1147,9 +1148,9 @@
             // PTPacketInfoLbl
             // 
             this.PTPacketInfoLbl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PTPacketInfoLbl.Location = new System.Drawing.Point(0, 240);
+            this.PTPacketInfoLbl.Location = new System.Drawing.Point(3, 243);
             this.PTPacketInfoLbl.Name = "PTPacketInfoLbl";
-            this.PTPacketInfoLbl.Size = new System.Drawing.Size(297, 31);
+            this.PTPacketInfoLbl.Size = new System.Drawing.Size(297, 25);
             this.PTPacketInfoLbl.TabIndex = 7;
             this.PTPacketInfoLbl.Text = "Header: 0, Length: 0";
             this.PTPacketInfoLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1165,7 +1166,7 @@
             // PTCorruptedLbl
             // 
             this.PTCorruptedLbl.AutoSize = true;
-            this.PTCorruptedLbl.Location = new System.Drawing.Point(310, 250);
+            this.PTCorruptedLbl.Location = new System.Drawing.Point(313, 253);
             this.PTCorruptedLbl.Name = "PTCorruptedLbl";
             this.PTCorruptedLbl.Size = new System.Drawing.Size(56, 13);
             this.PTCorruptedLbl.TabIndex = 4;
@@ -1176,7 +1177,7 @@
             // 
             this.PTCorruptedValueLbl.AutoSize = true;
             this.PTCorruptedValueLbl.ForeColor = System.Drawing.Color.Firebrick;
-            this.PTCorruptedValueLbl.Location = new System.Drawing.Point(362, 250);
+            this.PTCorruptedValueLbl.Location = new System.Drawing.Point(365, 253);
             this.PTCorruptedValueLbl.Name = "PTCorruptedValueLbl";
             this.PTCorruptedValueLbl.Size = new System.Drawing.Size(29, 13);
             this.PTCorruptedValueLbl.TabIndex = 5;
@@ -1186,12 +1187,12 @@
             // PTPacketTxt
             // 
             this.PTPacketTxt.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PTPacketTxt.Location = new System.Drawing.Point(0, 0);
+            this.PTPacketTxt.Location = new System.Drawing.Point(3, 3);
             this.PTPacketTxt.MaxLength = 2147483647;
             this.PTPacketTxt.Multiline = true;
             this.PTPacketTxt.Name = "PTPacketTxt";
             this.PTPacketTxt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.PTPacketTxt.Size = new System.Drawing.Size(397, 240);
+            this.PTPacketTxt.Size = new System.Drawing.Size(391, 240);
             this.PTPacketTxt.TabIndex = 3;
             // 
             // FiltersTab
@@ -1525,8 +1526,7 @@
             // 
             // CoTStatusTxt
             // 
-            this.CoTStatusTxt.Interval = 500;
-            this.CoTStatusTxt.BorderWidth = 1;
+            this.CoTStatusTxt.Interval = 500D;
             this.CoTStatusTxt.Location = new System.Drawing.Point(3, 288);
             this.CoTStatusTxt.Name = "CoTStatusTxt";
             this.CoTStatusTxt.Size = new System.Drawing.Size(350, 22);
