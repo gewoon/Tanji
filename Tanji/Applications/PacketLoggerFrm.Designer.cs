@@ -30,10 +30,7 @@ namespace Tanji.Applications
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.LoggerTxt = new System.Windows.Forms.RichTextBox();
-            this.PacketLoggerContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.PLCMCopyBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.PacketLoggerMenu = new System.Windows.Forms.MenuStrip();
             this.FileBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.FindBtn = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +58,6 @@ namespace Tanji.Applications
             this.ViewOutgoingLbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.ViewIncomingLbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.RevisionTxt = new System.Windows.Forms.ToolStripStatusLabel();
-            this.PacketLoggerContextMenu.SuspendLayout();
             this.PacketLoggerMenu.SuspendLayout();
             this.PacketLoggerStrip.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +66,6 @@ namespace Tanji.Applications
             // 
             this.LoggerTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.LoggerTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LoggerTxt.ContextMenuStrip = this.PacketLoggerContextMenu;
             this.LoggerTxt.DetectUrls = false;
             this.LoggerTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoggerTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -83,21 +78,7 @@ namespace Tanji.Applications
             this.LoggerTxt.Size = new System.Drawing.Size(710, 473);
             this.LoggerTxt.TabIndex = 0;
             this.LoggerTxt.Text = "";
-            // 
-            // PacketLoggerContextMenu
-            // 
-            this.PacketLoggerContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PLCMCopyBtn});
-            this.PacketLoggerContextMenu.Name = "ConstructMenu";
-            this.PacketLoggerContextMenu.Size = new System.Drawing.Size(145, 26);
-            // 
-            // PLCMCopyBtn
-            // 
-            this.PLCMCopyBtn.Name = "PLCMCopyBtn";
-            this.PLCMCopyBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.PLCMCopyBtn.Size = new System.Drawing.Size(144, 22);
-            this.PLCMCopyBtn.Text = "Copy";
-            this.PLCMCopyBtn.Click += new System.EventHandler(this.CopyBtn_Click);
+            this.LoggerTxt.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PacketLoggerFrm_MouseDown);
             // 
             // PacketLoggerMenu
             // 
@@ -349,7 +330,6 @@ namespace Tanji.Applications
             this.Name = "PacketLoggerFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tanji ~ Packet Logger";
-            this.PacketLoggerContextMenu.ResumeLayout(false);
             this.PacketLoggerMenu.ResumeLayout(false);
             this.PacketLoggerMenu.PerformLayout();
             this.PacketLoggerStrip.ResumeLayout(false);
@@ -373,8 +353,6 @@ namespace Tanji.Applications
         private System.Windows.Forms.ToolStripStatusLabel ViewOutgoingLbl;
         private System.Windows.Forms.ToolStripStatusLabel ViewIncomingLbl;
         private System.Windows.Forms.ToolStripMenuItem DisplayStructureBtn;
-        private System.Windows.Forms.ContextMenuStrip PacketLoggerContextMenu;
-        public System.Windows.Forms.ToolStripMenuItem PLCMCopyBtn;
         private System.Windows.Forms.ToolStripMenuItem DisplaySpecialsBtn;
         private System.Windows.Forms.ToolStripMenuItem TimestampBtn;
         private System.Windows.Forms.ToolStripMenuItem ClassNameBtn;

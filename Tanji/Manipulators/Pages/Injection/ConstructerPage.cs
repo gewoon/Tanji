@@ -37,14 +37,14 @@ namespace Tanji.Pages.Injection
         public ConstructerPage(InjectionPage parent, TabPage tab)
             : base(parent, tab)
         {
-
             UpdateUI();
 
             UI.CTHeaderTxt.DataBindings.Add("Value", this,
-                nameof(Header), false, DataSourceUpdateMode.OnPropertyChanged);
+            nameof(Header), false, DataSourceUpdateMode.OnPropertyChanged);
 
             UI.CTAmountTxt.DataBindings.Add("Value", this,
                 nameof(Amount), false, DataSourceUpdateMode.OnPropertyChanged);
+
 
             UI.CTValueTxt.KeyDown += CTValueTxt_KeyDown;
 

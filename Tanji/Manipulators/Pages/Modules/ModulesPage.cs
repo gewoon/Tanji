@@ -211,19 +211,26 @@ namespace Tanji.Pages.Modules
 
         private void Tab_DragDrop(object sender, DragEventArgs e)
         {
-            Contractor.InstallModule(
-                GetFirstFile((DataObject)e.Data));
+            string[] files = (string[])(e.Data.GetData(DataFormats.FileDrop));
+
+            foreach (string fPath in files)
+            {
+                Contractor.InstallModule(fPath);
+            }
+            
         }
         private void Tab_DragEnter(object sender, DragEventArgs e)
         {
-            string firstFile = GetFirstFile((DataObject)e.Data);
-            if (string.IsNullOrWhiteSpace(firstFile)) return;
+            string[] files = (string[])(e.Data.GetData(DataFormats.FileDrop));
 
-            if (firstFile.EndsWith(".exe") ||
-                firstFile.EndsWith(".dll"))
+            foreach(string fNames in files)
             {
-                e.Effect = DragDropEffects.Copy;
+                if (string.IsNullOrWhiteSpace(fNames)) return;
+
+                if (fNames.EndsWith(".exe") || fNames.EndsWith(".dll"))
+                    e.Effect = DragDropEffects.Copy;
             }
+
         }
 
         public void LoadModules()

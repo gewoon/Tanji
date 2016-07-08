@@ -708,7 +708,7 @@
             // CTHeaderLbl
             // 
             this.CTHeaderLbl.AutoSize = true;
-            this.CTHeaderLbl.Location = new System.Drawing.Point(3, 3);
+            this.CTHeaderLbl.Location = new System.Drawing.Point(12, 1);
             this.CTHeaderLbl.Name = "CTHeaderLbl";
             this.CTHeaderLbl.Size = new System.Drawing.Size(42, 13);
             this.CTHeaderLbl.TabIndex = 31;
@@ -717,7 +717,7 @@
             // CTAmountLbl
             // 
             this.CTAmountLbl.AutoSize = true;
-            this.CTAmountLbl.Location = new System.Drawing.Point(334, 3);
+            this.CTAmountLbl.Location = new System.Drawing.Point(343, 1);
             this.CTAmountLbl.Name = "CTAmountLbl";
             this.CTAmountLbl.Size = new System.Drawing.Size(43, 13);
             this.CTAmountLbl.TabIndex = 39;
@@ -727,7 +727,7 @@
             // 
             this.CTStructureTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CTStructureTxt.Location = new System.Drawing.Point(118, 223);
+            this.CTStructureTxt.Location = new System.Drawing.Point(120, 221);
             this.CTStructureTxt.Name = "CTStructureTxt";
             this.CTStructureTxt.ReadOnly = true;
             this.CTStructureTxt.Size = new System.Drawing.Size(273, 20);
@@ -738,7 +738,7 @@
             // 
             this.CTTransferBelowBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTTransferBelowBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTTransferBelowBtn.Location = new System.Drawing.Point(0, 249);
+            this.CTTransferBelowBtn.Location = new System.Drawing.Point(4, 249);
             this.CTTransferBelowBtn.Name = "CTTransferBelowBtn";
             this.CTTransferBelowBtn.Size = new System.Drawing.Size(106, 22);
             this.CTTransferBelowBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -747,7 +747,7 @@
             // 
             // CTChunkCountLbl
             // 
-            this.CTChunkCountLbl.Location = new System.Drawing.Point(3, 220);
+            this.CTChunkCountLbl.Location = new System.Drawing.Point(5, 220);
             this.CTChunkCountLbl.Name = "CTChunkCountLbl";
             this.CTChunkCountLbl.Size = new System.Drawing.Size(106, 20);
             this.CTChunkCountLbl.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -782,7 +782,7 @@
             this.CTRemoveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTRemoveBtn.BackColor = System.Drawing.Color.Transparent;
             this.CTRemoveBtn.Enabled = false;
-            this.CTRemoveBtn.Location = new System.Drawing.Point(112, 249);
+            this.CTRemoveBtn.Location = new System.Drawing.Point(114, 249);
             this.CTRemoveBtn.Name = "CTRemoveBtn";
             this.CTRemoveBtn.Size = new System.Drawing.Size(89, 22);
             this.CTRemoveBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -794,7 +794,7 @@
             this.CTMoveDownBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTMoveDownBtn.BackColor = System.Drawing.Color.Transparent;
             this.CTMoveDownBtn.Enabled = false;
-            this.CTMoveDownBtn.Location = new System.Drawing.Point(302, 249);
+            this.CTMoveDownBtn.Location = new System.Drawing.Point(304, 249);
             this.CTMoveDownBtn.Name = "CTMoveDownBtn";
             this.CTMoveDownBtn.Size = new System.Drawing.Size(89, 22);
             this.CTMoveDownBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -806,7 +806,7 @@
             this.CTMoveUpBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTMoveUpBtn.BackColor = System.Drawing.Color.Transparent;
             this.CTMoveUpBtn.Enabled = false;
-            this.CTMoveUpBtn.Location = new System.Drawing.Point(207, 249);
+            this.CTMoveUpBtn.Location = new System.Drawing.Point(209, 249);
             this.CTMoveUpBtn.Name = "CTMoveUpBtn";
             this.CTMoveUpBtn.Size = new System.Drawing.Size(89, 22);
             this.CTMoveUpBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -817,7 +817,7 @@
             // 
             this.CTClearBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTClearBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTClearBtn.Location = new System.Drawing.Point(0, 45);
+            this.CTClearBtn.Location = new System.Drawing.Point(3, 41);
             this.CTClearBtn.Name = "CTClearBtn";
             this.CTClearBtn.Size = new System.Drawing.Size(79, 22);
             this.CTClearBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -828,7 +828,7 @@
             // 
             this.CTWriteBooleanBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTWriteBooleanBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTWriteBooleanBtn.Location = new System.Drawing.Point(293, 45);
+            this.CTWriteBooleanBtn.Location = new System.Drawing.Point(295, 41);
             this.CTWriteBooleanBtn.Name = "CTWriteBooleanBtn";
             this.CTWriteBooleanBtn.Size = new System.Drawing.Size(98, 22);
             this.CTWriteBooleanBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -839,7 +839,7 @@
             // 
             this.CTWriteStringBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTWriteStringBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTWriteStringBtn.Location = new System.Drawing.Point(189, 45);
+            this.CTWriteStringBtn.Location = new System.Drawing.Point(191, 41);
             this.CTWriteStringBtn.Name = "CTWriteStringBtn";
             this.CTWriteStringBtn.Size = new System.Drawing.Size(98, 22);
             this.CTWriteStringBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -850,7 +850,7 @@
             // 
             this.CTWriteIntegerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CTWriteIntegerBtn.BackColor = System.Drawing.Color.Transparent;
-            this.CTWriteIntegerBtn.Location = new System.Drawing.Point(85, 45);
+            this.CTWriteIntegerBtn.Location = new System.Drawing.Point(87, 41);
             this.CTWriteIntegerBtn.Name = "CTWriteIntegerBtn";
             this.CTWriteIntegerBtn.Size = new System.Drawing.Size(98, 22);
             this.CTWriteIntegerBtn.Skin = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
@@ -860,7 +860,7 @@
             // CTValueLbl
             // 
             this.CTValueLbl.AutoSize = true;
-            this.CTValueLbl.Location = new System.Drawing.Point(88, 2);
+            this.CTValueLbl.Location = new System.Drawing.Point(97, 0);
             this.CTValueLbl.Name = "CTValueLbl";
             this.CTValueLbl.Size = new System.Drawing.Size(34, 13);
             this.CTValueLbl.TabIndex = 29;
@@ -878,11 +878,11 @@
             this.CTConstructerVw.GridLines = true;
             this.CTConstructerVw.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.CTConstructerVw.HideSelection = false;
-            this.CTConstructerVw.Location = new System.Drawing.Point(6, 67);
+            this.CTConstructerVw.Location = new System.Drawing.Point(3, 67);
             this.CTConstructerVw.MultiSelect = false;
             this.CTConstructerVw.Name = "CTConstructerVw";
             this.CTConstructerVw.ShowItemToolTips = true;
-            this.CTConstructerVw.Size = new System.Drawing.Size(385, 144);
+            this.CTConstructerVw.Size = new System.Drawing.Size(390, 144);
             this.CTConstructerVw.TabIndex = 44;
             this.CTConstructerVw.UseCompatibleStateImageBehavior = false;
             this.CTConstructerVw.View = System.Windows.Forms.View.Details;
@@ -908,7 +908,7 @@
             this.CTUpdateOnEnterChckbx.Checked = true;
             this.CTUpdateOnEnterChckbx.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CTUpdateOnEnterChckbx.Enabled = false;
-            this.CTUpdateOnEnterChckbx.Location = new System.Drawing.Point(212, 2);
+            this.CTUpdateOnEnterChckbx.Location = new System.Drawing.Point(221, 0);
             this.CTUpdateOnEnterChckbx.Name = "CTUpdateOnEnterChckbx";
             this.CTUpdateOnEnterChckbx.Size = new System.Drawing.Size(114, 17);
             this.CTUpdateOnEnterChckbx.TabIndex = 50;
@@ -1705,7 +1705,6 @@
         internal Sulakore.Components.SKoreTabControl InjectionTabs;
         internal System.Windows.Forms.TabPage ConstructerTab;
         internal System.Windows.Forms.ComboBox CTValueTxt;
-        internal System.Windows.Forms.NumericUpDown CTHeaderTxt;
         private System.Windows.Forms.Label CTHeaderLbl;
         private System.Windows.Forms.Label CTAmountLbl;
         internal System.Windows.Forms.TextBox CTStructureTxt;
@@ -1736,9 +1735,7 @@
         internal Sulakore.Components.SKoreButton STClearBtn;
         internal Sulakore.Components.SKoreButton STCreateBtn;
         internal System.Windows.Forms.NumericUpDown STIntervalTxt;
-        internal System.Windows.Forms.ComboBox STDestinationTxt;
         private System.Windows.Forms.Label STPacketLbl;
-        internal System.Windows.Forms.TextBox STPacketTxt;
         internal Sulakore.Components.SKoreSchedulerView STSchedulerVw;
         private System.Windows.Forms.ColumnHeader STPacketCol;
         private System.Windows.Forms.ColumnHeader STDestinationCol;
@@ -1750,10 +1747,8 @@
         private System.Windows.Forms.Panel PTGlow1;
         private System.Windows.Forms.Label PTCorruptedLbl;
         internal System.Windows.Forms.Label PTCorruptedValueLbl;
-        internal System.Windows.Forms.TextBox PTPacketTxt;
         internal System.Windows.Forms.TabPage FiltersTab;
         private System.Windows.Forms.Label FTDestinationLbl;
-        internal System.Windows.Forms.ComboBox FTDestinationTxt;
         internal System.Windows.Forms.NumericUpDown FTHeaderTxt;
         private System.Windows.Forms.Label FTHeaderLbl;
         internal Sulakore.Components.SKoreButton FTRemoveBtn;
@@ -1814,5 +1809,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label AboutTxt;
         internal Sulakore.Components.SKoreButton DonateBtn;
+        public System.Windows.Forms.TextBox PTPacketTxt;
+        public System.Windows.Forms.TextBox STPacketTxt;
+        public System.Windows.Forms.ComboBox STDestinationTxt;
+        public System.Windows.Forms.ComboBox FTDestinationTxt;
+        public System.Windows.Forms.NumericUpDown CTHeaderTxt;
     }
 }

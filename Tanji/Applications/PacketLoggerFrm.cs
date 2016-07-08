@@ -13,7 +13,11 @@ using Tanji.Applications.Dialogs;
 using Sulakore.Protocol;
 using Sulakore.Communication;
 
+using Tangine.Classes;
+
 using FlashInspect.ActionScript;
+using System.Diagnostics;
+using System.Linq;
 
 namespace Tanji.Applications
 {
@@ -402,6 +406,121 @@ namespace Tanji.Applications
             bool isIgnoring = false;
             ignored.TryGetValue(header, out isIgnoring);
             return isIgnoring;
+        }
+
+        private void PacketLoggerFrm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                if (string.IsNullOrEmpty(LoggerTxt.SelectedText)) return;
+
+                var menu = new ContextMenu();
+                menu.MenuItems.Add("Copy", CopyBtn_Click);
+
+                LoggerEntry data = new LoggerEntry();
+                data.Input = LoggerTxt.SelectedText;
+
+                if (data.isValid())
+                {
+                    data = new LoggerEntry(data.Input);
+                    var packet = data.Args.Packet;
+
+                    if (!data.isStructureEntry && !packet.IsCorrupted)
+                        menu.MenuItems.Add("Send again", new EventHandler((o, ea) => ReSend(packet)));
+
+                    menu.MenuItems.Add("-");
+
+                    var item = new MenuItem("Export to..");
+                    menu.MenuItems.Add(item);
+
+                    if (data.isStructureEntry)
+                    {
+                        item.MenuItems.Add("Constructer", new EventHandler((o, ea) => ToConstructor(LoggerTxt.SelectedText)));
+                        item.MenuItems.Add("-");
+                    }
+
+                    item.MenuItems.Add("Primitive", new EventHandler((o, ea) => ToPrimitive(packet.ToString())));
+                    item.MenuItems.Add("Scheduler", new EventHandler((o, ea) => ToScheduler(packet)));
+                    item.MenuItems.Add("Filters", new EventHandler((o, ea) => ToFilters(packet)));
+                }
+                LoggerTxt.ContextMenu = menu;
+            }
+        }
+
+        private void ToConstructor(string data)
+        {
+            MainUI.BringToFront();
+            MainUI.Activate();
+
+            MainUI.TanjiTabs.SelectTab(1);
+            MainUI.InjectionTabs.SelectTab(0);
+
+            MainUI.CTClearBtn.PerformClick();
+
+            List<string> splitted = data.Split(new[] { '{', '}' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            for (int i = 1; i < splitted.Count; i++)
+            {
+                string[] splittedd = splitted[i].Split(new[] { ':' }, 2, StringSplitOptions.None);
+
+                switch (splittedd[0])
+                {
+                    case "u":
+                        MainUI.CTHeaderTxt.Value = int.Parse(splittedd[1]);
+                        break;
+                    case "s":
+                        MainUI.InjectionPg.ConstructerPg.WriteString(splittedd[1]);
+                        break;
+                    case "i":
+                        MainUI.InjectionPg.ConstructerPg.WriteInteger(int.Parse(splittedd[1]));
+                        break;
+                    case "b":
+                        MainUI.InjectionPg.ConstructerPg.WriteBoolean(Boolean.Parse(splittedd[1]));
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        private void ToScheduler(HMessage packet)
+        {
+            MainUI.BringToFront();
+            MainUI.Activate();
+
+            MainUI.TanjiTabs.SelectTab(1);
+            MainUI.InjectionTabs.SelectTab(1);
+
+            MainUI.STPacketTxt.Text = packet.ToString();
+            MainUI.STDestinationTxt.SelectedIndex = (packet.Destination == HDestination.Server) ? 1 : 0;
+        }
+        private void ToPrimitive(string packet)
+        {
+            MainUI.BringToFront();
+            MainUI.Activate();
+
+            MainUI.TanjiTabs.SelectTab(1);
+            MainUI.InjectionTabs.SelectTab(2);
+
+            MainUI.PTPacketTxt.Text = packet;
+        }
+        private void ToFilters(HMessage packet)
+        {
+            MainUI.BringToFront();
+            MainUI.Activate();
+
+            MainUI.TanjiTabs.SelectTab(1);
+            MainUI.InjectionTabs.SelectTab(3);
+
+            MainUI.FTHeaderTxt.Value = packet.Header;
+            MainUI.FTDestinationTxt.SelectedIndex = (packet.Destination == HDestination.Server) ? 1 : 0;
+        }
+
+        private async void ReSend(HMessage packet)
+        {
+            if (packet.Destination == HDestination.Server)
+                await MainUI.Connection.SendToServerAsync(packet.ToBytes());
+            else
+                await MainUI.Connection.SendToClientAsync(packet.ToBytes());
         }
 
         protected override void OnActivated(EventArgs e)

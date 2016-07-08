@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\GitHubAttribute.cs" />
+    <Compile Include="Classes\LoggerEntry.cs" />
     <Compile Include="GitHub\GitAsset.cs" />
     <Compile Include="GitHub\GitProfile.cs" />
     <Compile Include="GitHub\GitRelease.cs" />
