@@ -12,6 +12,7 @@ Powered by [Sulakore](https://github.com/ArachisH/Sulakore), [FlashInspect](http
 
 ## Tutorials
 * [Connection](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Connection.md)
+* [Packetlogger](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Packetlogger.md)
 * [Injection](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md)
  * [Constructer](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md#constructer)
  * [Scheduler](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md#scheduler)
