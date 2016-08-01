@@ -156,11 +156,6 @@ namespace Tanji.Applications
                 }
             }
         }
-        private void CopyBtn_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(LoggerTxt.SelectedText))
-                Clipboard.SetText(LoggerTxt.SelectedText);
-        }
         private void EmptyLogBtn_Click(object sender, EventArgs e)
         {
             LoggerTxt.Clear();
@@ -415,7 +410,9 @@ namespace Tanji.Applications
                 if (string.IsNullOrEmpty(LoggerTxt.SelectedText)) return;
 
                 var menu = new ContextMenu();
-                menu.MenuItems.Add("Copy", CopyBtn_Click);
+                var iitem = new MenuItem("Copy", Copy);
+                iitem.Shortcut = Shortcut.CtrlC;
+                menu.MenuItems.Add(iitem);
 
                 LoggerEntry data = new LoggerEntry();
                 data.Input = LoggerTxt.SelectedText;
@@ -445,6 +442,12 @@ namespace Tanji.Applications
                 }
                 LoggerTxt.ContextMenu = menu;
             }
+        }
+
+        private void Copy(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(LoggerTxt.SelectedText))
+                Clipboard.SetText(LoggerTxt.SelectedText);
         }
 
         private void ToConstructor(string data)

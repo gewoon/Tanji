@@ -20,6 +20,11 @@ using Sulakore.Communication;
 using Eavesdrop;
 
 using Tangine.Habbo;
+using System.Threading.Tasks;
+using Sulakore.Modules;
+using System.Drawing;
+using Tanji.Properties;
+using Sulakore;
 
 namespace Tanji
 {
@@ -28,6 +33,8 @@ namespace Tanji
         private readonly List<IHaltable> _haltables;
         private readonly List<IReceiver> _receivers;
         private readonly EventHandler _connected, _disconnected;
+        private readonly Dictionary<string, Bitmap> _avatarCache;
+        private readonly Dictionary<HHotel, Dictionary<string, HProfile>> _profileCache;
 
         public HGame Game { get; set; }
         public HHotel Hotel { get; set; }
@@ -44,6 +51,9 @@ namespace Tanji
 
         public MainFrm()
         {
+            _avatarCache = new Dictionary<string, Bitmap>();
+            _profileCache = new Dictionary<HHotel, Dictionary<string, HProfile>>();
+
             InitializeComponent();
 
             _connected = Connected;
@@ -151,5 +161,41 @@ namespace Tanji
 
         private void DataOutgoing(object sender, DataInterceptedEventArgs e) => HandleData(e);
         private void DataIncoming(object sender, DataInterceptedEventArgs e) => HandleData(e);
+
+        public async Task<Bitmap> GetAvatarAsync(AuthorAttribute authorAtt)
+        {
+            HProfile profile = await GetProfileAsync(
+                authorAtt).ConfigureAwait(false);
+
+            if (profile == null)
+                return Resources.Avatar;
+
+            if (_avatarCache.ContainsKey(profile.User.FigureId))
+                return _avatarCache[profile.User.FigureId];
+
+            Bitmap avatar = await SKore.GetAvatarAsync(
+                profile.User.FigureId, HSize.Medium).ConfigureAwait(false);
+
+            _avatarCache[profile.User.FigureId] = avatar;
+            return avatar;
+        }
+
+        public async Task<HProfile> GetProfileAsync(AuthorAttribute authorAtt)
+        {
+            if (!_profileCache.ContainsKey(authorAtt.Hotel))
+                _profileCache[authorAtt.Hotel] = new Dictionary<string, HProfile>();
+
+            if (_profileCache[authorAtt.Hotel]
+                .ContainsKey(authorAtt.HabboName))
+            {
+                return _profileCache[authorAtt.Hotel][authorAtt.HabboName];
+            }
+
+            HProfile profile = await SKore.GetProfileAsync(
+                authorAtt.HabboName, authorAtt.Hotel).ConfigureAwait(false);
+
+            _profileCache[authorAtt.Hotel][authorAtt.HabboName] = profile;
+            return profile;
+        }
     }
 }

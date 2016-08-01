@@ -1799,7 +1799,6 @@
         private System.Windows.Forms.ColumnHeader MTStateCol;
         private System.Windows.Forms.Label MTAuthorsLbl;
         internal System.Windows.Forms.ComboBox MTAuthorsTxt;
-        private System.Windows.Forms.Label MTHabboNameLbl;
         private System.Windows.Forms.Label MTHotelLbl;
         internal Sulakore.Components.SKoreButton MTResourceBtn;
         internal Sulakore.Components.SKoreButton MTReleasesBtn;
@@ -1814,5 +1813,6 @@
         public System.Windows.Forms.ComboBox STDestinationTxt;
         public System.Windows.Forms.ComboBox FTDestinationTxt;
         public System.Windows.Forms.NumericUpDown CTHeaderTxt;
+        internal System.Windows.Forms.Label MTHabboNameLbl;
     }
 }

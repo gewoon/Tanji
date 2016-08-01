@@ -26,7 +26,7 @@ namespace Tangine.Classes
         {
             Input = input;
 
-            if (input.StartsWith("{l}{u:"))
+            if (input.StartsWith("{l}{u:") && input.EndsWith("}"))
             {
                 isStructureEntry = true;
                 Args = new DataInterceptedEventArgs(new HMessage(input), 0, null);
