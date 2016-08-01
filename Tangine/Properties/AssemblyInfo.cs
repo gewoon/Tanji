@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Tangine")]
 [assembly: AssemblyDescription("Tanji Module API")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ArachisH")]
+[assembly: AssemblyCompany("Tangerinos")]
 [assembly: AssemblyProduct("Tangine")]
-[assembly: AssemblyCopyright("Copyright © ArachisH 2016")]
-[assembly: AssemblyTrademark("The Old Nut Man")]
+[assembly: AssemblyCopyright("Copyright © Tangerinos 2016")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

@@ -17,7 +17,7 @@ namespace Tanji.Pages.About
         public AboutPage(MainFrm ui, TabPage tab)
             : base(ui, tab)
         {
-            TanjiRepo = new GitRepository("adversities", "Tanji");
+            TanjiRepo = new GitRepository("Tangerinos", "Tanji");
             LocalVersion = new Version(Application.ProductVersion);
 
             UI.DonateBtn.Click += DonateBtn_Click;

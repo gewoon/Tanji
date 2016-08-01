@@ -99,7 +99,7 @@ namespace Tanji
 
         private void TanjiInfoTxt_Click(object sender, EventArgs e)
         {
-            Process.Start("https://GitHub.com/adversities/Tanji");
+            Process.Start("https://GitHub.com/Tangerinos/Tanji");
         }
         private void TanjiVersionTxt_Click(object sender, EventArgs e)
         {
@@ -179,7 +179,6 @@ namespace Tanji
             _avatarCache[profile.User.FigureId] = avatar;
             return avatar;
         }
-
         public async Task<HProfile> GetProfileAsync(AuthorAttribute authorAtt)
         {
             if (!_profileCache.ContainsKey(authorAtt.Hotel))

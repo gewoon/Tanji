@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Tanji")]
 [assembly: AssemblyDescription("Habbo Hotel Packet(Logger/Manipulator)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ArachisH")]
+[assembly: AssemblyCompany("Tangerinos")]
 [assembly: AssemblyProduct("Tanji")]
-[assembly: AssemblyCopyright("Copyright © ArachisH 2015")]
-[assembly: AssemblyTrademark("The Old Nut Man")]
+[assembly: AssemblyCopyright("Copyright © Tangerinos 2015")]
+[assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
