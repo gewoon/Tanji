@@ -270,7 +270,7 @@ namespace Tanji.Applications
             this.AlwaysOnTopBtn.Name = "AlwaysOnTopBtn";
             this.AlwaysOnTopBtn.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.AlwaysOnTopBtn.Size = new System.Drawing.Size(196, 22);
-            this.AlwaysOnTopBtn.Text = "Always OnTop";
+            this.AlwaysOnTopBtn.Text = "Always On Top";
             this.AlwaysOnTopBtn.CheckedChanged += new System.EventHandler(this.Item_Checked);
             // 
             // ToolsBtn
