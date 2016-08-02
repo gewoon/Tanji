@@ -1,6 +1,6 @@
 # Tanji
 Application for intercepting, and manipulating Outgoing/Incoming data relative to the Habbo Hotel client.
-Powered by [Sulakore](https://github.com/ArachisH/Sulakore), [FlashInspect](https://github.com/ArachisH/FlashInspect), and [Eavesdrop](https://github.com/ArachisH/Eavesdrop).
+Powered by [Sulakore](https://github.com/Tangerinos/Sulakore), [FlashInspect](https://github.com/ArachisH/FlashInspect), and [Eavesdrop](https://github.com/ArachisH/Eavesdrop).
 ## Requirements
 * [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653)+
 
@@ -11,18 +11,18 @@ Powered by [Sulakore](https://github.com/ArachisH/Sulakore), [FlashInspect](http
 * Create extensions that can extend the functionality of the application.
 
 ## Tutorials
-* [Connection](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Connection.md)
-* [Packetlogger](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Packetlogger.md)
-* [Injection](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md)
- * [Constructer](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md#constructer)
- * [Scheduler](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md#scheduler)
- * [Primitive](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md#primitive)
- * [Filters](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Injection.md#filters)
-* [Toolbox](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Toolbox.md)
-* [Modules](https://github.com/ArachisH/Tanji/blob/master/Tutorials/Modules.md)
+* [Connection](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Connection.md)
+* [Packetlogger](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Packetlogger.md)
+* [Injection](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Injection.md)
+ * [Constructer](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Injection.md#constructer)
+ * [Scheduler](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Injection.md#scheduler)
+ * [Primitive](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Injection.md#primitive)
+ * [Filters](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Injection.md#filters)
+* [Toolbox](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Toolbox.md)
+* [Modules](https://github.com/Tangerinos/Tanji/blob/master/Tutorials/Modules.md)
 
 ## Initial Interface
-![TanjiUI](http://i.imgur.com/i8vao3r.png)
+![TanjiII](https://i.gyazo.com/f584c553b1de523a6d30b08d8481567e.png)
 
 -
 Want to keep this project alive, and healthy?
