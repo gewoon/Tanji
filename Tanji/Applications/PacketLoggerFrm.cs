@@ -151,7 +151,6 @@ namespace Tanji.Applications
                 case nameof(AlwaysOnTopBtn):
                 {
                     TopMost = isChecked;
-                    MainUI.TopMost = isChecked;
                     break;
                 }
             }
